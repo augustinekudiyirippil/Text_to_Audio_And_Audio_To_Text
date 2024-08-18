@@ -38,23 +38,27 @@ namespace SpeechRecognition
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.barSpeed = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.barVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // txtVoice
             // 
-            this.txtVoice.Location = new System.Drawing.Point(24, 80);
+            this.txtVoice.Location = new System.Drawing.Point(31, 112);
+            this.txtVoice.Margin = new System.Windows.Forms.Padding(4);
             this.txtVoice.Multiline = true;
             this.txtVoice.Name = "txtVoice";
-            this.txtVoice.Size = new System.Drawing.Size(786, 347);
+            this.txtVoice.Size = new System.Drawing.Size(1009, 484);
             this.txtVoice.TabIndex = 0;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(24, 456);
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStart.Location = new System.Drawing.Point(31, 638);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(128, 52);
+            this.btnStart.Size = new System.Drawing.Size(165, 73);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -62,9 +66,11 @@ namespace SpeechRecognition
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(165, 456);
+            this.btnStop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStop.Location = new System.Drawing.Point(212, 638);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(128, 52);
+            this.btnStop.Size = new System.Drawing.Size(165, 73);
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -75,7 +81,8 @@ namespace SpeechRecognition
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label1.Location = new System.Drawing.Point(33, 32);
+            this.label1.Location = new System.Drawing.Point(42, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(348, 37);
             this.label1.TabIndex = 3;
@@ -83,9 +90,11 @@ namespace SpeechRecognition
             // 
             // btnTextToAudio
             // 
-            this.btnTextToAudio.Location = new System.Drawing.Point(689, 456);
+            this.btnTextToAudio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTextToAudio.Location = new System.Drawing.Point(886, 638);
+            this.btnTextToAudio.Margin = new System.Windows.Forms.Padding(4);
             this.btnTextToAudio.Name = "btnTextToAudio";
-            this.btnTextToAudio.Size = new System.Drawing.Size(121, 52);
+            this.btnTextToAudio.Size = new System.Drawing.Size(156, 73);
             this.btnTextToAudio.TabIndex = 4;
             this.btnTextToAudio.Text = "Text to Audio";
             this.btnTextToAudio.UseVisualStyleBackColor = true;
@@ -93,42 +102,59 @@ namespace SpeechRecognition
             // 
             // barVolume
             // 
-            this.barVolume.Location = new System.Drawing.Point(92, 524);
+            this.barVolume.Location = new System.Drawing.Point(118, 734);
+            this.barVolume.Margin = new System.Windows.Forms.Padding(4);
             this.barVolume.Name = "barVolume";
-            this.barVolume.Size = new System.Drawing.Size(718, 45);
+            this.barVolume.Size = new System.Drawing.Size(923, 45);
             this.barVolume.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 524);
+            this.label2.Location = new System.Drawing.Point(31, 734);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Volume";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 584);
+            this.label3.Location = new System.Drawing.Point(31, 818);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.Size = new System.Drawing.Size(53, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Speed";
             // 
             // barSpeed
             // 
-            this.barSpeed.Location = new System.Drawing.Point(92, 584);
+            this.barSpeed.Location = new System.Drawing.Point(118, 818);
+            this.barSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.barSpeed.Minimum = -10;
             this.barSpeed.Name = "barSpeed";
-            this.barSpeed.Size = new System.Drawing.Size(718, 45);
+            this.barSpeed.Size = new System.Drawing.Size(923, 45);
             this.barSpeed.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(712, 889);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(329, 41);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Speech to text";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 676);
+            this.ClientSize = new System.Drawing.Size(1092, 946);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.barSpeed);
             this.Controls.Add(this.label2);
@@ -138,6 +164,8 @@ namespace SpeechRecognition
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtVoice);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Speech recognition";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -159,6 +187,8 @@ namespace SpeechRecognition
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TrackBar barSpeed;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbVoice;
     }
 }
 

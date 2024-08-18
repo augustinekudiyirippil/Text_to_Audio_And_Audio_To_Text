@@ -12,6 +12,10 @@ using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Threading;
 using System.Diagnostics;
+
+using Google.Cloud.Speech.V1;
+
+
  
 
 
@@ -26,6 +30,14 @@ namespace SpeechRecognition
         public   Choices clist = new Choices();
 
 
+
+
+
+
+        //Start
+
+
+        //End
      
 
         public Form1()
@@ -39,6 +51,7 @@ namespace SpeechRecognition
         {
             barVolume.Value = 10;
             barSpeed.Value = 0;
+            cmbVoice.SelectedIndex = 0;
 
         }
 
@@ -62,11 +75,17 @@ namespace SpeechRecognition
             {
                 sre.RequestRecognizerUpdate();
                 sre.LoadGrammar(gr);
+                
+              //  txtVoice.Text= sre.Recognize().Text;
+
                 sre.SpeechRecognized += sre_speachrecognised;
                 sre.SetInputToDefaultAudioDevice();
-                sre.RecognizeAsync(RecognizeMode.Multiple);
+
+                 sre.RecognizeAsync(RecognizeMode.Multiple);
+                 
 
 
+               
             
 
             }
@@ -81,7 +100,12 @@ namespace SpeechRecognition
 
         }
 
-        private void sre_speachrecognised(object sender, SpeechRecognizedEventArgs e)
+        private void sre_speachdetected(object sender, SpeechRecognizedEventArgs e)
+        {
+            MessageBox.Show(e.Result.Text);
+
+        }
+            private void sre_speachrecognised(object sender, SpeechRecognizedEventArgs e)
         {
             //  "Hello","How are you", "what is the current time", "Open Chrome", "Thank you", "Close"
             try
@@ -152,6 +176,7 @@ namespace SpeechRecognition
             }
 
 
+         
 
 }
 
@@ -166,15 +191,42 @@ namespace SpeechRecognition
 
         private void btnTextToAudio_Click(object sender, EventArgs e)
         {
+            try 
+            { 
+
+            
+                    ss.Volume =barVolume.Value;
+                    ss.Rate = barSpeed.Value  ;// -2;     
+
+            
 
 
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume =barVolume.Value;
-            synthesizer.Rate = barSpeed.Value  ;// -2;     
- 
 
- 
-            synthesizer.SpeakAsync(txtVoice.Text.Trim());
+                ss.SpeakAsync(txtVoice.Text.Trim());
+
+
+             }
+                   
+            catch(Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error");
+            }
+
+
+}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            frmSpeechRecognition frmSpeech = new frmSpeechRecognition();
+            frmSpeech.Show();
+
+
+
+
+
 
         }
     }
