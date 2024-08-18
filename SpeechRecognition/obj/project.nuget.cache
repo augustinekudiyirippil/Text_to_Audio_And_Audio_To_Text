@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "8cQyBFIhAISPTNKtA12zMLAH/X/dCJWUREDR2L4ogVJkHqqNVt+ErdtPPp6yAyZKrlPuSu/wUNJTPmvEeHwa5w==",
+  "success": true,
+  "projectFilePath": "D:\\Developments\\Speech recognition\\SpeechRecognition\\SpeechRecognition.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Demo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Demo\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Demo\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Demo\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Demo\\.nuget\\packages\\system.speech\\6.0.0\\system.speech.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
